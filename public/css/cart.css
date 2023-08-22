@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+/* cart_top.blade.php */
+body {
+    min-width: 990px;
+}
+
+main {
+    color: #323310;
+    position: relative;
+    justify-content: center;
+    min-width: 990px;
+    max-width: 100%;
+    min-height: 350px;
+    margin: 0 auto;
+}
+
+.cart_wrap {
+    margin: 0 auto;
+    padding: 6% 1%;
+    width: 85%;
+}
+
+.title {
+    margin-bottom: 60px;
+}
+
+.title p {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.cart_list {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.cart_list li {
+    width: 100%;
+    display: flex;
+    min-height: 150px;
+    border: 1px solid #ddd;
+    justify-content: space-around;
+}
+
+.book_item_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 19px 0 19px 15px;
+    color: inherit;
+}
+
+.book_item {
+    width: 100%;
+    display: flex;
+}
+
+.book_cover {
+    min-width: 100px;
+    max-width: 100px;
+    height: 122px;
+    padding: 6px 0;
+    margin-right: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.book_cover img {
+    min-width: 100px;
+    max-width: 100px;
+    height: 122px;
+    padding: 6px 0;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.book_information {
+    padding-right: 15px;
+}
+
+.book_title {
+    margin-top: 0;
+}
+
+.book_title p {
+    font-weight: 700;
+}
+
+.book_author {
+    margin-top: 4px;
+}
+
+.book_author p {
+    font-size: 13px;
+}
+
+.book_price {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.book_price p {
+    font-size: 15px;
+}
+
+.book_item_actions {
+    position: relative;
+    right: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    text-align: center;
+    align-items: center;
+}
+
+.favorite_addition {
+    margin-right: 5px;
+}
+
+.favorite_addition p {
+    white-space: nowrap;
+}
+
+.cart_delete {
+    margin-left: 5px;
+}
+
+.cart_delete p {
+    white-space: nowrap;
+}
+
+.total_price_box {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 80px auto 0 auto;
+}
+
+.total_price_box h1 {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.total_price {
+    margin-left: 20px;
+}
+
+.total_price p {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.purchase_action {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 80px auto 0 auto;
+}
+
+.purchase_button{
+    border: 1px solid #e3e548;
+    border-radius: 99px;
+    background-color: #e3e548;
+    text-align: center;
+    padding: 15px 100px;
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+.button {
+    border: none;
+    background-color: #e3e548;
+}
+
+.purchase_button p {
+    color: inherit;
+    color: #323310;
+}

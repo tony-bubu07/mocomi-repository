@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+/* comic_browse.blade.php */
+body {
+    min-width: 990px;
+}
+
+.browse_header {
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+    background-color: #696969;
+}
+
+.browse_header_main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    color: #fffafa;
+}
+
+.title p {
+    font-weight: bolder;
+}
+
+.browse_close {
+    display: flex;
+}
+
+.browse_close p {
+    margin-left: 5px;
+    margin-top: -2px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    color: #323310;
+    /* position: absolute; */
+    margin: 0 auto;
+    /* z-index: 1; */
+}
+
+.comic_page {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.comic_page img {
+    object-fit: cover;
+    width: 50%;
+}
+
+.pagination {
+    height: 780px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 3;
+    /* opacity: 0; */
+}
+
+.go_previous_page {
+    display: inline;
+    width: 25%;
+    height: 780px;
+}
+
+.go_previous_page i {
+    height: 100%;
+    width: 100%;
+}
+
+.go_back_page {
+    display: inline;
+    
+    width: 25%;
+    height: 780px;
+    border: 1px sol
+}
+
+.go_back_page i {
+    height: 100%;
+    width: 100%;
+}

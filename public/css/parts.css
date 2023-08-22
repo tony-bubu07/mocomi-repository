@@ -1,0 +1,439 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+
+/* headerSub.blade.php */
+.headerSub {
+    position: relative;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    padding: 0 5%;
+    padding-top: 15px;
+    flex-wrap: wrap;
+    z-index: 10;
+    border-bottom: 1px solid #dcdcdc;
+    min-width: 990px;
+}
+
+.headerSub_logo {
+    padding: 10px 0 0 0;
+    margin: 0 auto;
+}
+
+.headerSub_logo img {
+    object-fit: cover;
+    width: 150px;
+    height: 100%;
+}
+
+/* header.blade.php */
+
+.common_header {
+    color: #323310;
+    width: 100%;
+    min-width: 990px;
+}
+
+.common_header_upside {
+    position: relative;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    padding: 2% 5%;
+    display: flex;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.common_header_left {
+    display: flex;
+}
+
+.logo {
+    padding: 10px 0 0 0;
+}
+
+.logo img {
+    object-fit: cover;
+    width: 180px;
+}
+
+.search_header {
+    margin: 27px 0 0 30px;
+}
+
+.search_header_input {
+    border: 1px solid #323310;
+    border-radius: 17px;
+    color: #323310;
+    font-size: 10px;
+    width: 165px;
+    height: 40px;
+    text-align: center;
+}
+
+.search_header_button{
+    border: 1px solid #e3e548;
+    background-color: #e3e548;
+    border-radius: 18px;
+    color: #323310;
+    font-size: 15px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.common_header_right {
+    margin: 10px 0 0 auto;
+}
+
+
+.bookshelf {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.bookshelfTxt {
+    color: #323310;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bookshelfTxt i {
+    font-size: 1.6em;
+}
+
+.bookshelfTxt p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.favoriteTxt {
+    color: #323310;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.favoriteTxt i {
+    font-size: 1.6em;
+}
+
+.favoriteTxt p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.cartTxt {
+    color: #323310;
+    border: none;
+    background-color: white;
+}
+
+.cartTxt i {
+    font-size: 1.6em;
+}
+
+.cartTxt p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.loginTxt {
+    color: #323310;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.loginTxt i {
+    font-size: 1.6em;
+}
+
+.loginTxt p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.mypageTxt {
+    color: #323310;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.mypageTxt i {
+    font-size: 1.6em;
+}
+
+.mypageTxt p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.logoutTxt {
+    color: #323310;
+    border: none;
+    background-color: white;
+}
+
+.logoutTxt i {
+    font-size: 1.6em;
+}
+
+.logoutTxt p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.common_header_right_under{
+    margin-top: 10px;
+}
+
+.comment p {
+    font-size: small;
+    text-align: center;
+}
+
+.common_header_beneath {
+    margin-top: 30px;
+}
+
+.common_header_beneath ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link_total {
+    color: #323310;
+    border-bottom: 2px solid #323310;
+}
+
+.link_boyYoung {
+    color: #323310;
+    border-bottom: 2px solid #7bafed;
+}
+
+.link_girlWoman {
+    color: #323310;
+    border-bottom: 2px solid #ee827c;
+}
+
+.link {
+    color: inherit
+}
+
+/* footer.blade.php */
+.common_footer {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    display: inline-grid;
+    border-top: 1px solid #323310;
+    color: #323310;
+    background-color: #f5f5f5;
+}
+
+.search_footer {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: inline-flex;
+}
+
+.search_footer i {
+    padding-top: 4px;
+
+}
+
+.search_form {
+    position: relative;
+}
+
+.search_footer input {
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 10px;
+    width: 165px;
+}
+
+.footer_beneath {
+    margin: 20px auto;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer_under p {
+    font-weight: bold;
+}
+
+.comic_genre_list {
+    display: inline-block;
+    font-size: 10px;
+}
+
+.comic_genre_list h1 {
+    font-weight: bold;
+}
+
+.comic_genre_list li {
+    margin-top: 2px;
+}
+
+.comic_genre_list ul li a {
+    color: inherit;
+}
+
+.member_page_list {
+    display: inline-block;
+    font-size: 10px;
+}
+
+.member_page_list h1 {
+    font-weight: bold;
+}
+
+.bookshelfTxt_f {
+    color: #323310;
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: 0;
+}
+
+.bookshelfTxt_f h2 {
+    font-size: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.favoriteTxt_f {
+    color: #323310;
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: 0;
+}
+
+.favoriteTxt_f h2 {
+    font-size: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.mypageTxt_f {
+    color: #323310;
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: 0;
+}
+
+.mypageTxt_f h2 {
+    font-size: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.logoutTxt_f {
+    color: #323310;
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: 0;
+}
+
+.logoutTxt_f h2 {
+    font-size: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.mocomi_guide_list {
+    display: inline-block;
+    font-size: 10px;
+}
+
+.mocomi_guide_list h1 {
+    font-weight: bold;
+}
+
+.mocomi_guide_list li {
+    margin-top: 2px;
+}

@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+/* mypage_top.blade.php */
+body {
+    min-width: 990px;
+}
+
+main {
+    color: #323310;
+    position: relative;
+    justify-content: center;
+    min-width: 990px;
+    max-width: 100%;
+    min-height: 350px;
+    margin: 0 auto;
+}
+
+.mypage_header {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 80px auto 0 auto;
+}
+
+.upside {
+    width: 30%;
+}
+
+.transition {
+    border-bottom: 4px solid #e3e548;
+    color: inherit;
+    color: #323310;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+.beneath {
+    width: 30%;
+    margin-top: 60px;
+}
+
+.transition_apload_wrap{
+    width: 30%;
+    margin-top: 60px;
+}
+
+.apload{
+    border-bottom: 4px solid #e3e548;
+    color: inherit;
+    color: #323310;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+.mypage_wrap {
+    width: 70%;
+    margin: 80px auto;
+    padding: 1% 5%;
+    border: 1px solid #ccc;
+    
+}
+
+.mypage_title {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.user_infomation {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.user_icon {
+    width: 30%;
+}
+
+.user_icon img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.user_name_wrap {
+    display: block;
+}
+
+.user_name_title {
+    font-weight: bolder;
+}
+
+.user_name {
+    align-self: center;
+    font-weight: bolder;
+    font-size: larger;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/*データベースに登録したデータを表示するためのtableの設定*/
+table {
+    margin: 0 auto;
+    width: 98%;
+    margin-bottom: 20px;
+}
+
+.table_title {
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.norts_comment_wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.norts_comment1{
+    text-align: center;
+}
+
+td {
+    word-break: break-all;
+    font-size: 13px;
+}
+
+.user_img {
+    width: 80px;
+}
+
+.user_img img {
+    width: 100%;
+    object-fit: cover;
+    padding: 5px;
+}
+
+table, td, th{
+    border: 1px solid black;
+    text-align: center;
+}

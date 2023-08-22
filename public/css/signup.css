@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+
+/* login.blade.php */
+body {
+    width: 100%;
+    min-width: 990px;
+}
+
+.registerWrap {
+    padding: 0 16px;
+    margin: 50px auto;
+    max-width: 420px;
+    text-align: center;
+}
+
+.registerHeader p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.signupMenuList {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.signupMenuList li {
+    margin-bottom: 10px;
+}
+
+.signup_email {
+    width: 100%;
+    border: 1px solid #e3e548;
+}
+
+.signup_email p {
+    text-align: center;
+    font-weight: bold;
+    background-color: #e3e548;
+    padding: 10px;
+}
+
+.signup_email dl {
+    padding: 20px;
+}
+
+.signup_email h3{
+    margin-top: 15px;
+}
+
+.name_form {
+    border-bottom: 1px solid black;
+}
+
+.email_form {
+    border-bottom: 1px solid black;
+}
+
+.password_form {
+    border-bottom: 1px solid black;
+}
+
+.signup_email_button {
+    margin-top: 15px;
+    border-bottom: none;
+    text-align: center;
+}
+
+.signupButton {
+    padding: 10px;
+    border: none;
+    background-color: #e3e548;
+    text-align: center;
+    width: 100%;
+}
+
+.signup_email input {
+    width: 100%;
+    border: none;
+    height: 40px;
+}
+
+.signup_Twitter {
+    width: 100%;
+    background-color: #18A0F2;
+}
+
+.signup_Twitter p {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.signup_LINE {
+    width: 100%;
+    background-color: #06c755;
+}
+
+.signup_LINE p {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.signup_Apple {
+    width: 100%;
+    background-color: #000001;
+}
+
+.signup_Apple p {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.signup_Google {
+    width: 100%;
+    border: 1.5px solid #000001;
+}
+
+.signup_Google p {
+    text-align: center;
+    font-weight: bold;
+    color: #000001;
+    padding: 10px;
+}

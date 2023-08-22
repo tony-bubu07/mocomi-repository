@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+
+/* login.blade.php */
+body {
+    width: 100%;
+    min-width: 990px;
+}
+
+.accWrap {
+    padding: 0 16px;
+    margin: 50px auto;
+    max-width: 420px;
+    text-align: center;
+}
+
+.accheader p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.loginMenuList {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.loginMenuList li {
+    margin-bottom: 10px;
+}
+
+.login_email {
+    width: 100%;
+    border: 1px solid #e3e548;
+}
+
+.login_email p {
+    text-align: center;
+    font-weight: bold;
+    background-color: #e3e548;
+    padding: 10px;
+}
+
+.login_email dl {
+    padding: 20px;
+}
+
+.login_email dd {
+    border-bottom: 1px solid black;
+}
+
+.login_email input {
+    width: 100%;
+    border: none;
+    height: 40px;
+}
+
+.login_email dd:nth-child(2) {
+    margin-top: 15px;
+}
+
+.login_email dd:nth-child(3) {
+    margin-top: 15px;
+    border-bottom: none;
+    text-align: center;
+}
+
+.loginButton {
+    padding: 10px;
+    border: none;
+    background-color: #e3e548;
+    text-align: center;
+    width: 100%;
+}
+
+.login_Twitter {
+    width: 100%;
+    background-color: #18A0F2;
+}
+
+.login_Twitter p {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.login_LINE {
+    width: 100%;
+    background-color: #06c755;
+}
+
+.login_LINE p {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.login_Apple {
+    width: 100%;
+    background-color: #000001;
+}
+
+.login_Apple p {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.login_Google {
+    width: 100%;
+    border: 1.5px solid #000001;
+}
+
+.login_Google p {
+    text-align: center;
+    font-weight: bold;
+    color: #000001;
+    padding: 10px;
+}
+
+.go_signup {
+    margin-top: 40px;
+}
+
+.go_signup p {
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+}
+
+.go_signup h1{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #e3e548;
+    color: #000001;
+}

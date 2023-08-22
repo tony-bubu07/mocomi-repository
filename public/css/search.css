@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+/* search_result.blade.php */
+body {
+    min-width: 990px;
+}
+
+.searchResultWrap {
+    margin: 0 auto;
+    padding: 6%;
+}
+
+.numberIndication p {
+    font-size: small;
+}
+
+.searchResult ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.searchResult li {
+    align-items: center;
+    border: 1px solid #ccc;
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.comicWrap {
+    display: flex;
+    justify-content: center;
+    margin: 4%;
+    height: 150px;
+    width: 100%;
+}
+
+.comic {
+    display: flex;
+    width: 100%;
+}
+
+.comic img {
+    display: inline;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comicInfo {
+    margin: 10px 0 10px 30px;
+    display: block;
+    width: 70%;
+    text-align: center;
+}
+
+.comicInfo p {
+    font-size: medium;
+}
+
+.title p {
+    font-weight: bold;
+    font-size: larger;
+    color:inherit;
+    color: #323310;
+}
+
+.author p{
+    color:inherit;
+    color: #323310;
+}
+
+.evaluation {
+    margin-top: 12%;
+    display: flex;
+}
+
+.evaluation p {
+    color:inherit;
+    color: #323310;
+}
+
+.star5_rating{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC; /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before, .star5_rating:after{
+    content: '★★★★★';
+}
+
+.star5_rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */

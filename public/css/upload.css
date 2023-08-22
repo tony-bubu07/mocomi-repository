@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+/* mypage_top.blade.php */
+body {
+    min-width: 990px;
+}
+
+main {
+    color: #323310;
+    position: relative;
+    justify-content: center;
+    min-width: 990px;
+    max-width: 100%;
+    min-height: 350px;
+    margin: 0 auto;
+}
+
+.upload_wrap {
+    width: 70%;
+    margin: 80px auto;
+    /* padding: 0 5%; */
+    padding: 1% 5%;
+}
+
+.upload_wrap_title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+#book_upload_form {
+    text-align: center;
+}
+
+#book_upload_form  dl {
+    text-align: center;
+}
+
+#book_upload_form_main{
+    display: flex;
+    justify-content: space-around;
+}
+
+#book_cover_wrap {
+    margin-right: 20px;
+}
+
+#book_cover {
+    width: 70%;
+    margin: 0 auto 40px auto;
+}
+
+#book_cover img {
+    object-fit: cover;
+    width: 100%;
+}
+
+#book_cover {
+    text-align: center;
+}
+
+#book_cover_norts {
+    white-space: nowrap;
+    text-align: center;
+}
+
+#book_cover_input {
+    text-align: center;
+}
+
+#book_cover  {
+    margin: 0 auto 20px auto;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#image {
+    font-size: larger;
+}
+
+#account_edit_form_text{
+    margin: 0 auto 0 auto;
+    width: 70%;
+    margin: auto 0;
+}
+
+#book_title_titke {
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#book_title_notes{
+    margin-left: 15px;
+    font-size: small;
+}
+
+#book_title {
+    margin-top: 5px;
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 16px;
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    font-size: large;
+}
+
+#book_author_title{
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#book_author_notes{
+    margin-left: 15px;
+    font-size: small;
+}
+
+#book_author {
+    margin-top: 5px;
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 16px;
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    font-size: large;
+}
+
+#book_price_title{
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#price_notes {
+    font-size: small;
+    margin-left: 5px;
+}
+
+#book_price_notes{
+    margin-left: 15px;
+    font-size: small;
+}
+
+#book_price {
+    margin-top: 5px;
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 16px;
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    font-size: large;
+}
+
+#book_kinds_id_title{
+    margin-top: 30px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#book_kinds_id {
+    margin-top: 5px;
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 18px;
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    font-size: large;
+}
+
+#confirmation_button{
+    margin-top: 40px;
+    border: 1px solid #e3e548;
+    border-radius: 99px;
+    background-color: #e3e548;
+    text-align: center;
+    padding: 15px 100px;
+    cursor: pointer;
+    transition: box-shadow .15s;
+    font-size: large;
+}
+
+/*データベースに登録したデータを表示するためのtableの設定*/
+table {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+td {
+    word-break: break-all;
+    font-size: 13px;
+}
+
+.cover_img {
+    width: 80px;
+}
+
+.cover_img img {
+    width: 100%;
+    object-fit: cover;
+    padding: 5px;
+}
+
+table, td, th{
+    border: 1px solid black;
+    text-align: center;
+}

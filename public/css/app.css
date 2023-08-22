@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+
+/* app.blade.php */
+
+body {
+    color: #323310;
+    background-color: none;
+}
+
+.container {
+    position: relative;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    padding: 2% 5%;
+    /* border-bottom: 1px solid #dcdcdc */
+}
+
+.navbar-brand {
+    padding: 10px 0 0 0;
+}
+
+.navbar-brand img {
+    object-fit: cover;
+    width: 180px;
+}
+
+/* home.blade.php */
+.wrap {
+    position: relative;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    padding: 2% 5%;
+}
+
+.card {
+    border: none;
+    --bs-card-border-width: none;
+    --bs-card-cap-bg: none;
+}
+
+.card-header {
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 100px auto 180px auto;
+}
+
+.transition_top_button {
+    border: 1px solid #e3e548;
+    border-radius: 99px;
+    background-color: #e3e548;
+    text-align: center;
+    padding: 15px 75px;
+    cursor: pointer;
+    transition: box-shadow .15s;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.transition_top_button p {
+    color: inherit;
+    color: #323310;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* login.blade.php */
+/* register.blade.php */
+/* 共通 */
+.form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e3e548;
+}
+
+.google_wrap {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.login_Google {
+    border: 1px solid #000001;
+    font-weight: bold;
+    color: #000001;
+    height: 50px;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+/* login.blade.php */
+.login_card_wrap {
+    margin: 20px auto 30px auto;
+    /* width: 500px; */
+}
+
+.card-header_login {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #e3e548;
+}
+
+.col-md-8 {
+    text-align: center;
+    /* display: -webkit-inline-box; */
+    margin: 0 auto;
+}
+
+.col-md-8 button {
+    background-color: #e3e548;
+    border: #e3e548;
+    color: #323310;
+    --bs-btn-hover-bg: #cacc3f;
+    width: 50%;
+    height: 50px;
+    border-radius: 28px;
+    margin-top: 60px;
+}
+
+.btn_forgot_password a {
+    margin-top: 10px;
+    --bs-btn-hover-color: #cacc3f;
+    color: #323310;
+}
+
+/* register.blade.php */
+.register_card_wrap {
+    margin: 20px auto 30px auto;
+    /* width: 500px; */
+}
+
+.card-header_register {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #e3e548;
+}
+
+.col-md-6 {
+    text-align: center;
+    /* display: -webkit-inline-box; */
+    margin: 0 auto;
+}
+
+.role {
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px 0;
+}
+
+.col-md-6 button {
+    background-color: #e3e548;
+    border: #e3e548;
+    color: #323310;
+    --bs-btn-hover-bg: #cacc3f;
+    width: 50%;
+    height: 50px;
+    border-radius: 28px;
+    margin-top: 60px;
+}
+
+.btn_forgot_password a {
+    margin-top: 10px;
+    --bs-btn-hover-color: #cacc3f;
+    color: #323310;
+}
+
+/* email.blade.php */
+/* reset.blade.php */
+/* 共通 */
+.alert {
+    border-bottom: 1px solid #e2e68a;
+    background-color: none;
+    width: 60%;
+    margin: 0 auto;
+    color: inherit;
+    color: #323310;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.transition_top_button {
+
+
+    padding: 15px 75px;
+    cursor: pointer;
+    transition: box-shadow .15s;
+
+
+}
+
+.transition_top_button p {
+    color: inherit;
+    color: #323310;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* email.blade.php */
+.card-header_email {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #e3e548;
+}
+
+.email_send_button button {
+    width: 300px;
+}
+
+/* reset.blade.php */
+.card-header_reset {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #e3e548;
+}

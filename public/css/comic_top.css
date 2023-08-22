@@ -1,0 +1,390 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+img {
+    border-style: none;
+    display: block;
+}
+
+hr {
+    display: none;
+}
+
+em {
+    font-style: normal
+}
+
+input {
+    line-height: auto;
+    vertical-align: middle;
+}
+
+strong.more {
+    color: #c30
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ここからcss設定 */
+/* comic_top.blade.php */
+body {
+    min-width: 990px;
+}
+
+main {
+    color: #323310;
+    position: relative;
+    justify-content: center;
+    min-width: 990px;
+    max-width: 100%;
+    min-height: 350px;
+    margin: 0 auto;
+}
+
+.bookTopWrap {
+    margin: 0 auto;
+    padding: 6% 1%;
+}
+
+.title p {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.book_information {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.book_cover {
+    width: 15%;
+    margin-right: 7%;
+}
+
+.book_cover img {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3.5 / 5;
+}
+
+.author_price_evaluation_read {
+    margin: 2% 0 0 7%;
+    font-size: larger;
+}
+
+.author p {
+    font-size: large;
+}
+
+.price {
+    margin-top: 12%;
+}
+
+.evaluation {
+    margin-top: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.star5_rating {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC;
+    /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before,
+.star5_rating:after {
+    content: '★★★★★';
+}
+
+.star5_rating:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #e3e548;
+    /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after {
+    width: 100%;
+}
+
+/* 星5 */
+.star5_rating[data-rate="4.5"]:after {
+    width: 90%;
+}
+
+/* 星4.5 */
+.star5_rating[data-rate="4"]:after {
+    width: 80%;
+}
+
+/* 星4 */
+.star5_rating[data-rate="3.5"]:after {
+    width: 70%;
+}
+
+/* 星3.5 */
+.star5_rating[data-rate="3"]:after {
+    width: 60%;
+}
+
+/* 星3 */
+.star5_rating[data-rate="2.5"]:after {
+    width: 50%;
+}
+
+/* 星2.5 */
+.star5_rating[data-rate="2"]:after {
+    width: 40%;
+}
+
+/* 星2 */
+.star5_rating[data-rate="1.5"]:after {
+    width: 30%;
+}
+
+/* 星1.5 */
+.star5_rating[data-rate="1"]:after {
+    width: 20%;
+}
+
+/* 星1 */
+.star5_rating[data-rate="0.5"]:after {
+    width: 10%;
+}
+
+/* 星0.5 */
+.star5_rating[data-rate="0"]:after {
+    width: 0%;
+}
+
+/* 星0 */
+
+.review_count {
+    border-bottom: 1px solid #323310;
+    color: inherit;
+    margin-left: 20px;
+}
+
+.review_rating_rating {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon {
+    margin-right: 1.5px;
+}
+
+.review_rating_comment {
+    border-bottom: 1px solid #323310;
+}
+
+.read {
+    margin-top: 40px;
+    border: 1px solid #e3e548;
+    border-radius: 99px;
+    background-color: #e3e548;
+    text-align: center;
+    padding: 15px 100px;
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+.comicRead {
+    color: inherit;
+}
+
+.comicRead p {
+    text-align: center;
+}
+
+.beneath {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart_button {
+    border: none;
+    background-color: white;
+    padding: 0;
+}
+
+.cart {
+    color: #323310;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 99px;
+    transition: box-shadow .15s;
+    padding: 15px 100px;
+}
+
+.cart i {
+    margin-right: 5px;
+}
+
+.favorite {
+    color: #323310;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 99px;
+    transition: box-shadow .15s;
+    padding: 15px 100px;
+}
+
+.favorite i {
+    margin-right: 5px;
+}
+
+.contents_series {
+    color: #323310;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto 20px auto;
+    padding: 6% 1%;
+}
+
+.contents_series h1 {
+    font-size: 21px;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.contents_series_list {
+    grid-gap: 0 20px;
+    display: grid;
+    gap: 0 20px;
+    grid-auto-rows: 0;
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-rows: repeat(1, 1fr);
+    margin-bottom: -20px;
+    overflow-y: hidden;
+}
+
+.contents_series_list_item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 120px;
+}
+
+
+.list_item_content {
+    transition: opacity .15s;
+}
+
+.item_cover {
+    align-items: center;
+    display: flex;
+    height: 168px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 120px;
+}
+
+.item_cover img {
+    border: 1px solid #eee;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.book_item_title {
+    margin-top: 8px;
+    font-size: 13px;
+    height: 2.5em;
+    overflow: hidden;
+    text-align: center;
+    word-break: break-all;
+}
+
+.book_item_action {
+    text-align: center;
+}
+
+.icon-btn-wrapper {
+    display: inline-block;
+}
+
+.icon-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 99px;
+    cursor: pointer;
+    display: block;
+    font: inherit;
+    height: 40px;
+    margin: auto;
+    min-height: 40px;
+    min-width: 40px;
+    outline: none;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    transition: box-shadow .15s;
+    width: 40px;
+}
