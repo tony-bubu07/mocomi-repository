@@ -50,11 +50,6 @@ if (session()) {
                     </dt>
                     <div id="user_icon">
                         <img src="{{ asset($users_data['image_path']) }}" id="preview">
-                        <p>{{ asset($users_data['image_path']) }}</p>
-
-                        <img src="{{ Storage::url($users_data['image_path']) }}" id="preview">
-                        <p>{{ Storage::url($users_data['image_path']) }}</p>
-
                     </div>
 
                     <div id="account_edit_form_text">
