@@ -128,6 +128,10 @@ class MocomiController extends Controller
             // アップロードされたファイル名を取得
             $image_path = str_replace('public/', 'storage/', $file_name);
 
+            // $image_path = public_path('storage/' . $dir . '/' . $file->hashName());
+            // $image_path = public_path('storage/' . $dir . '/' . $file_name);
+
+
             // セッションに画像パスをセット
             $request->session()->put('session_image_path', $image_path);
         }
@@ -138,6 +142,8 @@ class MocomiController extends Controller
 
         $this->validate($request, $validateRules, $validateMessages);
         $users_data = $request->all();
+
+        // var_dump($users_data);
 
         return view('mocomi.account_edit_confirmation')->with('users_data', $users_data);
     }
