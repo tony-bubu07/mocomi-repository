@@ -35,6 +35,7 @@ if (session()) {
     $users_data['id'] = session('id');
 }
 ?>
+
 <body>
     <!-- ヘッダーの外部ファイル('header.blade.php')を読み込み -->
     @include('mocomi.header')
@@ -45,11 +46,18 @@ if (session()) {
                 @csrf
                 <dl>
                     <!-- ユーザーアイコン選択フォーム -->
-                    <dt id="image_title">
+                    <!-- <dt id="image_title">
                         <label for="image">イメージ</label>
                     </dt>
                     <div id="user_icon">
                         <img src="{{ asset($users_data['image_path']) }}" id="preview">
+                    </div> -->
+
+                    <dt id="image_title">
+                        <label for="image">イメージ</label>
+                    </dt>
+                    <div id="user_icon">
+                        <img src="{{ asset(session('session_image_path')) }}" id="preview">
                     </div>
 
                     <div id="account_edit_form_text">

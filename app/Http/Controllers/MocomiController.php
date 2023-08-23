@@ -90,13 +90,13 @@ class MocomiController extends Controller
         $validateRules = [
             'image' => ['mimes:jpg,jpeg,png'],
             'name' => ['required', 'string', 'max:30'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'max:20',  'confirmed'],
         ];
 
         $validateMessages = [
             // 画像 バリデーションメッセージ
-            "image.required" => "イメージの画像は必須項目です",
+            // "image.required" => "イメージの画像は必須項目です",
             "image.mimes:jpg,jpeg,png" => "イメージの画像ファイル形式はjpg、jpeg、pngにしてください",
 
             // ユーザー名 バリデーションメッセージ
@@ -106,7 +106,7 @@ class MocomiController extends Controller
             // メールアドレス バリデーションメッセージ
             "email.required" => "メールアドレスは必須項目です",
             "email.max:255" => "メールアドレスは255文字以内で入力してください",
-            "email.unique:users" => "メールアドレスは有効なものを入力してください",
+            // "email.unique:users" => "メールアドレスは有効なものを入力してください",
             "email.email" => "正しく入力してください",
 
             // パスワード バリデーションメッセージ
@@ -118,6 +118,8 @@ class MocomiController extends Controller
         // ディレクトリ名
         $dir = 'sample';
 
+        // $newImagePath = null;
+
         // ファイルのアップロード
         if ($request->hasFile('image')) {
 
@@ -126,10 +128,16 @@ class MocomiController extends Controller
             $file_name = $file->store('public/' . $dir);
 
             // アップロードされたファイル名を取得
-            $image_path = str_replace('public/', 'storage/', $file_name);
+            $newImagePath = str_replace('public/', 'storage/', $file_name);
 
             // セッションに画像パスをセット
-            $request->session()->put('session_image_path', $image_path);
+            $request->session()->put('session_image_path', $newImagePath);
+
+        }else if (!$request->hasFile('image')) {
+
+            $nowImagePath = Auth::user()->image_path;
+            
+            $request->session()->put('session_image_path', $nowImagePath);
         }
 
         $request->session()->put('session_name', $request->input('name'));
@@ -201,9 +209,9 @@ class MocomiController extends Controller
         //users テーブルのデータを User Model のgetData メソッド経由で取得する
         $book = $object
             ->join('bookshelfs as bs', 'books.id', '=', 'bs.book_id')
-            ->join('users as u', 'bs.user_id', '=', DB::raw($loggedInUserId) )// @@ 'u.id' を $loggedInUserId に変更
+            ->join('users as u', 'bs.user_id', '=', DB::raw($loggedInUserId)) // @@ 'u.id' を $loggedInUserId に変更
             ->select('books.*')
-            ->where('u.id', $loggedInUserId) 
+            ->where('u.id', $loggedInUserId)
             ->get();
 
 
