@@ -29,7 +29,7 @@
         var title = "{{ $books->title }}"; //タイトル名
         var site = "{{ route('top') }}"; //サイトのURL
         var copy = "{{ $books->author }}"; //作者名
-        var display = 0; //左ページ始まりは「0」、右ページ始まりは「1」
+        var display = 1; //左ページ始まりは「0」、右ページ始まりは「1」
         /* *ここまで **/
 
         $(function() {
