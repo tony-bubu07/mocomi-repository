@@ -1,3 +1,18 @@
+# Mocomi(モコミ)
+PHP自作
+
+## 概要
+コミック閲覧サイトを作成しました。
+
+管理者ユーザー、投稿ユーザー、一般ユーザーの3つに分け、
+それぞれでログインできるようにしています。
+
+API連携を使ってサインインを行う場合は一般ユーザーへ振り分けられます。
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
