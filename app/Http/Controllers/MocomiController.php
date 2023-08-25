@@ -410,7 +410,12 @@ class MocomiController extends Controller
 
         $object = new Book();
         //books テーブルのデータを Book Model のgetData メソッド経由で取得する
-        $books_data = $object->getData();
+        // $books_data = $object->getData();
+
+        $books_data = $object
+        ->join('book_kinds', 'books.book_kind_id', '=', 'book_kinds.id')
+        ->select('books.*', 'book_kinds.name as book_kinds_name') 
+        ->get();
 
         // var_dump($books_data);
 
