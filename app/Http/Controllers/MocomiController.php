@@ -330,7 +330,7 @@ class MocomiController extends Controller
         //books テーブルのデータを Book Model のgetData メソッド経由で取得する
 
         // 少年/青年
-        $men_books_data = $object->where('book_kinds_id', 1)->orderBy('id', 'DESC')->get();
+        $men_books_data = $object->where('book_kind_id', 1)->orderBy('id', 'DESC')->get();
 
         // var_dump($men_books_data);
 
@@ -347,7 +347,7 @@ class MocomiController extends Controller
         $object = new Book();
         //books テーブルのデータを Book Model のgetData メソッド経由で取得する
         // 少女/女性
-        $women_books_data = $object->where('book_kinds_id', 2)->orderBy('id', 'DESC')->get();
+        $women_books_data = $object->where('book_kind_id', 2)->orderBy('id', 'DESC')->get();
 
         // var_dump( $women_books_data);
 
