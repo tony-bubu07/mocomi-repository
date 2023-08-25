@@ -140,10 +140,16 @@ main {
 
 .readWrap {
     display: inline;
+    cursor: pointer;
 }
 
 .read {
     border-radius: 15px;
     background-color: white;
     border: 1px solid #808080;
+    cursor: pointer;
+}
+
+.read_text {
+    cursor: pointer;
 }

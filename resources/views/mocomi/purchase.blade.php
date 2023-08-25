@@ -90,7 +90,7 @@ if (session()) {
 
             <div class="purchase_action">
                 <a href="{{ route('cart', ['id' => session('session_id')]) }}" class="back_button">
-                    <p>戻る</p>
+                    <p class="purchase_button_text">戻る</p>
                 </a>
                 <div class="purchase_button">
                     <form action="{{ route('purchase_complete') }}" method="post">
@@ -102,7 +102,7 @@ if (session()) {
                         <input type="hidden" name="price" value="{{ session('session_price') }}">
                         <a href="{{ route('purchase_complete') }}" class="">
                             <button type="submit" class="button">
-                                <p>購入を確定する</p>
+                                <p class="button_text">購入を確定する</p>
                             </button>
                         </a>
                 </div>

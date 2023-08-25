@@ -250,7 +250,8 @@ main {
     background-color: #e3e548;
 }
 
-.purchase_button p {
+.button_text {
     color: inherit;
     color: #323310;
+    cursor: pointer;
 }

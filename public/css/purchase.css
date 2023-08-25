@@ -242,6 +242,20 @@ main {
     margin: 80px auto 0 auto;
 }
 
+.back_button {
+    border: 1px solid #e3e548;
+    border-radius: 99px;
+    text-align: center;
+    padding: 15px 100px;
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+.purchase_button_text {
+    color: inherit;
+    color: #323310;
+}
+
 .purchase_button {
     border: 1px solid #e3e548;
     border-radius: 99px;
@@ -252,26 +266,13 @@ main {
     transition: box-shadow .15s;
 }
 
-.purchase_button p {
-    color: inherit;
-    color: #323310;
-}
-
 .button {
     border: none;
     background-color: #e3e548;
 }
 
-.back_button {
-    border: 1px solid #e3e548;
-    border-radius: 99px;
-    text-align: center;
-    padding: 15px 100px;
-    cursor: pointer;
-    transition: box-shadow .15s;
-}
-
-.back_button p {
+.button_text {
     color: inherit;
     color: #323310;
+    cursor: pointer;
 }
