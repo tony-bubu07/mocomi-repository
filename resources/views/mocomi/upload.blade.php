@@ -138,7 +138,7 @@
             <td class="cover_img"><img src="{{ asset( $book->cover_path ) }}"></td>
             <td>{{ $book->author }}</td>
             <td>{{ $book->price }}</td>
-            <td>{{ $book->book_kind_id }}</td>
+            <td>{{ $book->book_kinds_name }}</td>
             <td>{{ $book->created_at }}</td>
         </tr>
         @endforeach
