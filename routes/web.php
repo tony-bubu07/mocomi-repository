@@ -107,7 +107,7 @@ Route::group(['middleware' => ['auth', 'can:user'], ['auth', 'can:post-user'], [
     Route::post('/account_delete_complete/{id}', [MocomiController::class, 'account_delete_complete'])->name('account_delete_complete');
     Route::get('/account_delete_complete/{id}', [MocomiController::class, 'account_delete_complete'])->name('account_delete_complete');
 
-    // 本棚ページ/{id}
+    // 本棚ページ
     Route::get('/bookshelf', [MocomiController::class, 'bookshelf'])->name('bookshelf');
 
     // お気に入り一覧ページ

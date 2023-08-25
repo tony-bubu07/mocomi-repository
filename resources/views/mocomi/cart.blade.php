@@ -68,14 +68,14 @@ if (session()) {
                                 </div>
                             </div>
                         </a>
-                        <div class="book_item_actions">
+                        <!-- <div class="book_item_actions">
                             <div class="favorite_addition">
                                 <p><a href="{{ route('favorite') }}">おきにいりに追加</a></p>
                             </div>
                             <div class="cart_delete">
                                 <p>削除</p>
                             </div>
-                        </div>
+                        </div> -->
                     </li>
 
                 </ul>
@@ -96,7 +96,7 @@ if (session()) {
                     <input type="hidden" name="price" value="{{ session('session_price') }}">
                     <a href="{{ route('purchase') }}" class="purchase_button">
                         <button type="submit" class="button">
-                            <p>購入へ進む</p>
+                            <p class="button_text">購入へ進む</p>
                         </button>
                     </a>
                 </form>

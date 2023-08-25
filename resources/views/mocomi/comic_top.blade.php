@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="beneath">
-                    <form action="{{ route('cart') }}" method="post">
+                    <form action="{{ route('cart') }}" method="post" class="button_wrap">
                         @csrf
                         <input type="hidden" name="id" value="{{ $books->id }}">
                         <input type="hidden" name="cover_path" value="{{ $books->cover_path }}">

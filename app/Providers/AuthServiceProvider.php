@@ -29,17 +29,17 @@ class AuthServiceProvider extends ServiceProvider
 
       // 管理ユーザーに許可（サイト内全て閲覧可能）
       Gate::define('admin', function ($user) {
-        return $user->role === 2;
+        return $user->role_id === 2;
       });
 
       // 投稿ユーザーに許可（一般ユーザー、投稿ユーザー範囲が閲覧可能）
       Gate::define('post-user', function ($user) {
-        return $user->role >= 1;
+        return $user->role_id >= 1;
       });
 
       // 一般ユーザーに許可
       Gate::define('user', function ($user) {
-        return $user->role >= 0 ;
+        return $user->role_id >= 0 ;
       });
     }
 }

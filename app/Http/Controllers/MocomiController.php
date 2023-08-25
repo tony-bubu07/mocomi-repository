@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 //使いたいクラスを書く
 
 use App\Models\Book;
+use App\Models\Role;
 use App\Models\Bookshelf;
 use App\Models\member;
 use App\Models\Mocomi;
@@ -41,10 +42,10 @@ class MocomiController extends Controller
         $books_data = $object->orderBy('id', 'DESC')->take(10)->get();
 
         // 少年/青年
-        $men_books_data = $object->where('book_kinds_id', 1)->orderBy('id', 'DESC')->take(5)->get();
+        $men_books_data = $object->where('book_kind_id', 1)->orderBy('id', 'DESC')->take(5)->get();
 
         // 少女/女性
-        $women_books_data = $object->where('book_kinds_id', 2)->orderBy('id', 'DESC')->take(5)->get();
+        $women_books_data = $object->where('book_kind_id', 2)->orderBy('id', 'DESC')->take(5)->get();
 
         // var_dump($books_data, $men_books_data, $women_books_data);
 
@@ -65,7 +66,12 @@ class MocomiController extends Controller
 
         $object = new User();
         //users テーブルのデータを User Model のgetData メソッド経由で取得する
-        $users_data = $object->getData();
+        // $users_data = $object->getData();
+
+        $users_data = $object
+        ->join('roles', 'users.role_id', '=', 'roles.id')
+        ->select('users.*', 'roles.name as role_name') 
+        ->get();
 
         // var_dump($users_data);
 
@@ -421,7 +427,7 @@ class MocomiController extends Controller
             'title' => ['required', 'string', 'max:100', 'unique:books'],
             'author' => ['required', 'string', 'max:50'],
             'price' => ['required', 'alpha_num', 'max:20'],
-            'book_kinds_id' => ['required', 'alpha_num'],
+            'book_kind_id' => ['required', 'alpha_num'],
         ];
 
         $validateMessages = [
@@ -441,11 +447,11 @@ class MocomiController extends Controller
             // 価格 バリデーションメッセージ
             "price.required" => "価格は必須項目です",
             "price.alpha_num" => "価格は半角数字で入力してください",
-            "password.max:20" => "価格は20文字以内で入力してください",
+            "price.max:20" => "価格は20文字以内で入力してください",
 
             // 分野別ID バリデーションメッセージ
-            "book_kinds_id.required" => "分野別IDの選択は必須項目です",
-            "book_kinds_id.alpha_num" => "分野別IDの選択は半角数字",
+            "book_kind_id.required" => "分野別IDの選択は必須項目です",
+            "book_kind_id.alpha_num" => "分野別IDの選択は半角数字",
         ];
 
         // ディレクトリ名
@@ -468,7 +474,7 @@ class MocomiController extends Controller
         $request->session()->put('session_title', $request->input('title'));
         $request->session()->put('session_author', $request->input('author'));
         $request->session()->put('session_price', $request->input('price'));
-        $request->session()->put('session_book_kinds_id', $request->input('book_kinds_id'));
+        $request->session()->put('session_book_kind_id', $request->input('book_kind_id'));
 
         $this->validate($request, $validateRules, $validateMessages);
         $books_data = $request->all();
@@ -478,7 +484,7 @@ class MocomiController extends Controller
         $books_data['title'] = session('session_title');
         $books_data['author'] = session('session_author');
         $books_data['price'] = session('session_price');
-        $books_data['book_kinds_id'] = session('session_book_kinds_id');
+        $books_data['book_kind_id'] = session('session_book_kind_id');
 
         return view('mocomi.upload_confirmation')->with('books_data', $books_data);
     }
@@ -492,7 +498,7 @@ class MocomiController extends Controller
         $title = session('session_title');
         $author = session('session_author');
         $price = session('session_price');
-        $book_kinds_id = session('session_book_kinds_id');
+        $book_kind_id = session('session_book_kind_id');
 
         $new_data = new Book();
 
@@ -502,7 +508,7 @@ class MocomiController extends Controller
             'title' => $title,
             'author' => $author,
             'price' => $price,
-            'book_kinds_id' => $book_kinds_id,
+            'book_kind_id' => $book_kind_id,
         ]);
 
         // データベースの更新

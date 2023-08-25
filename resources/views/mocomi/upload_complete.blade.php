@@ -29,7 +29,7 @@ if (session()) {
     $books_data['title'] = session('session_title');
     $books_data['author'] = session('session_author');
     $books_data['price'] = session('session_price');
-    $books_data['book_kinds_id'] = session('session_book_kinds_id');
+    $books_data['book_kind_id'] = session('session_book_kind_id');
     $books_data['book_evaluation_id'] = session('session_book_evaluation_id');
 }
 ?>

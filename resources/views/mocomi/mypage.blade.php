@@ -97,7 +97,6 @@
         <p class="table_title">登録済みユーザー一覧</p>
         <div class="norts_comment_wrap">
             <p class="norts_comment1">※パスワードは暗号化されているため下記ような表記となります</p>
-            <p class="norts_comment2">ユーザー権限 0 : 一般ユーザー | 1 : 投稿ユーザー | 2 : 管理者</p>
         </div>
         <tr>
             <th class="th">ユーザーid</th>
@@ -121,7 +120,7 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->password }}</td>
-            <td>{{ $user->role }}</td>
+            <td>{{ $user->role_name }}</td>
             <td class="user_img"><img src="{{ asset( $user->image_path ) }}"></td>
             <!-- <td>{{ $user->favorite_id }}</td>
             <td>{{ $user->bookshelf_id }}</td>

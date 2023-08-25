@@ -44,7 +44,7 @@
                 </a>
                 <a href="{{ route('comic_browse',['id' => $item->id]) }}" class="readWrap">
                     <button type="submit" name="id" value="本ID" class="read">
-                        <h1>読む</h1>
+                        <h1 class="read_text">読む</h1>
                     </button>
                 </a>
             </div>

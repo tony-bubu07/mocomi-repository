@@ -16,7 +16,7 @@ class Book extends Model
         'cover_path',
         'author',
         'price',
-        'book_kinds_id',
+        'book_kind_id',
         'book_evaluation_id',
         'created_at',
         'updated_at',

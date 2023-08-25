@@ -261,13 +261,7 @@ main {
     justify-content: space-evenly;
 }
 
-.cart_button {
-    border: none;
-    background-color: white;
-    padding: 0;
-}
-
-.cart {
+.button_wrap{
     color: #323310;
     display: flex;
     text-align: center;
@@ -277,6 +271,18 @@ main {
     border-radius: 99px;
     transition: box-shadow .15s;
     padding: 15px 100px;
+}
+
+.cart_button {
+    color: #323310;
+    display: flex;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.cart {
+    display: flex;
 }
 
 .cart i {

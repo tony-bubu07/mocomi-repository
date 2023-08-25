@@ -91,11 +91,11 @@
                             </dd>
 
                             <!--分野別ID入力フォーム-->
-                            <dt id="book_kinds_id_title">
+                            <dt id="book_kind_id_title">
                                 <label for="book_kinds_id">分野選択</label>
                             </dt>
-                            <dd id="book_kinds_id_input">
-                                <select name="book_kinds_id" id="book_kinds_id">
+                            <dd id="book_kind_id_input">
+                                <select name="book_kind_id" id="book_kind_id">
                                     <option value="">分野を選択してください</option>
                                     <option value="1">少年/青年</option>
                                     <option value="2">少女/女性</option>
@@ -138,7 +138,7 @@
             <td class="cover_img"><img src="{{ asset( $book->cover_path ) }}"></td>
             <td>{{ $book->author }}</td>
             <td>{{ $book->price }}</td>
-            <td>{{ $book->book_kinds_id }}</td>
+            <td>{{ $book->book_kind_id }}</td>
             <td>{{ $book->created_at }}</td>
         </tr>
         @endforeach
