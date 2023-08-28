@@ -128,6 +128,7 @@
             <th class="th">価格</th>
             <th class="th">分野</th>
             <th class="th">作成日</th>
+            <th class="th">削除</th>
         </tr>
 
 
@@ -140,6 +141,7 @@
             <td>{{ $book->price }}</td>
             <td>{{ $book->book_kinds_name }}</td>
             <td>{{ $book->created_at }}</td>
+            <td><a href="{{ route('book_delete',['id' => $book->id]) }}" onclick="return confirm('削除しますか')">削除</a></td>
         </tr>
         @endforeach
 

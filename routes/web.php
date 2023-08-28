@@ -146,6 +146,9 @@ Route::group(['middleware' => ['auth', 'can:post-user'], ['auth', 'can:admin']],
     // アップロードページ
     Route::get('/upload', [MocomiController::class, 'upload'])->name('upload');
 
+    //データの削除
+    Route::get('/book_delete/{id}', [MocomiController::class, 'book_delete'])->name('book_delete');
+
     // アップロード確認ページ
     Route::get('/upload_confirmation', [MocomiController::class, 'upload_confirmation'])->name('upload_confirmation');
     Route::post('/upload_confirmation', [MocomiController::class, 'upload_confirmation'])->name('upload_confirmation');

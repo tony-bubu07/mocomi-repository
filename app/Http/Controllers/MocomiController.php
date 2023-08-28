@@ -422,6 +422,13 @@ class MocomiController extends Controller
         return view('mocomi.upload', ['books_data' => $books_data]);
     }
 
+    public function book_delete($id)
+    {
+        $books = Book::find($id);
+        $books->delete();
+        return view('mocomi.book_delete_complete');
+    }
+
     // アップロード確認
     public function upload_confirmation(Request $request)
     {
