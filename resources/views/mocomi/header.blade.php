@@ -16,10 +16,7 @@
                     <a href="{{ route('search_result') }}"><input class="search_header_button" type="submit" value="検索"></a>
                 </form>
             </div>
-            <!-- 開発時のみ使用 -->
-            <!-- <a href="{{ route('search_result') }}">
-                <p>検索結果へ</p>
-            </a> -->
+
         </div>
         <div class="common_header_right">
             <div class="common_header_right_upper">
