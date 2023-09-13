@@ -36,7 +36,7 @@ http://localhost/mocomi/public/ -->
             <p>サイト内広告バナー</p>
         </div>
         <div class="total_ranking">
-            <p>総合売上ランキング</p>
+            <p>総合</p>
             <div class="total_ranking_main">
                 <!-- 総合ランキング -->
                 @foreach($books_data as $book)
@@ -68,8 +68,8 @@ http://localhost/mocomi/public/ -->
             </div>
         </div>
         <div class="men_ranking">
-            <p>少年/青年 売上ランキング</p>
-            <p><a href="{{ route('men') }}"><i class="fa-solid fa-caret-right"></i> ランキングの続きはこちら</a></p>
+            <p class="men_ranking_title">少年/青年</p>
+            <p class="men_ranking_continuation"><a href="{{ route('men') }}"><i class="fa-solid fa-caret-right"></i> 続きはこちら</a></p>
             
             <div class="men_ranking_main">
                 <!-- 少年/青年ランキング -->
@@ -102,8 +102,8 @@ http://localhost/mocomi/public/ -->
             </div>
         </div>
         <div class="women_ranking">
-            <p>少女/女性 売上ランキング</p>
-            <p><a href="{{ route('women') }}"><i class="fa-solid fa-caret-right"></i> ランキングの続きはこちら</a></p>
+            <p class="women_ranking_title">少女/女性</p>
+            <p class="women_ranking_continuation"><a href="{{ route('women') }}"><i class="fa-solid fa-caret-right"></i> 続きはこちら</a></p>
 
             <div class="women_ranking_main">
                 <!-- 少女/女性ランキング -->

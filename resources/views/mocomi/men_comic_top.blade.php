@@ -27,7 +27,7 @@
             <p>サイト内広告バナー</p>
         </div>
         <div class="men_ranking">
-            <p>少年/青年 売上ランキング</p>
+            <p class="men_ranking_title">少年/青年</p>
             <div class="men_ranking_main">
                 <!-- 少年/青年ランキング -->
                 @foreach($men_books_data as $book)

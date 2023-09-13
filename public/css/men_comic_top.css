@@ -96,7 +96,7 @@ body {
     display: grid;
 }
 
-.men_ranking p:first-child {
+.men_ranking_title {
     margin: 0 auto;
     display: inline;
     color: #323310;
@@ -104,10 +104,16 @@ body {
     border-bottom: 2px solid #7bafed;
 }
 
-.men_ranking p:nth-child(2) {
+.men_ranking_continuation {
     text-align: right;
     font-size: small;
+    color: inherit;
     color: #323310;
+    margin-right: 5%;
+}
+
+.men_ranking_continuation a{
+    color: inherit;
 }
 
 .men_ranking_main {

@@ -84,7 +84,7 @@ if (session()) {
 
                             <!--分野別ID入力フォーム-->
                             <dt id="book_kind_id_title">
-                                <label for="book_kind_id">分野選択<span id="book_kind_id_notes">1 : 少女/女性 | 2: 少年/青年 </span></label>
+                                <label for="book_kind_id">分野選択<span id="book_kind_id_notes"></span></label>
                             </dt>
                             <dd id="book_kind_id_input">
                                 <select disabled id="book_kind_id_input_select">

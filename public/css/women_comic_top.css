@@ -96,7 +96,7 @@ body {
     display: grid;
 }
 
-.women_ranking p:first-child {
+.women_ranking_title {
     margin: 0 auto;
     display: inline;
     color: #323310;
@@ -104,10 +104,16 @@ body {
     border-bottom: 2px solid #ee827c;
 }
 
-.women_ranking p:nth-child(2) {
+.women_ranking_continuation {
     text-align: right;
     font-size: small;
+    color: inherit;
     color: #323310;
+    margin-right: 5%;
+}
+
+.women_ranking_continuation a{
+    color: inherit;
 }
 
 .women_ranking_main {
