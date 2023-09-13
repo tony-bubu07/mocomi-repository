@@ -23,7 +23,7 @@ npm run dev
 
 登録済みテストアカウント
 
-名前 → AdministratorUser
+名前 → AdminUser
 
 メールアドレス → Admin@co.jp
 
@@ -55,7 +55,7 @@ npm run dev
 
 名前 → GeneralUser
 
-メールアドレス → GeneralUser@co.jp
+メールアドレス → General@co.jp
 
 パスワード → GeneralUser
 
