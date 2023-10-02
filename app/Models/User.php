@@ -41,7 +41,6 @@ class User extends Authenticatable
     {
         $users_data = DB::table($this->table)->get();
         return $users_data;
-
     }
 
     /**
@@ -73,5 +72,13 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new UserResetPassword($token));
+    }
+
+    /**
+     * Likeモデルとのリレーション定義
+     */
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
     }
 }

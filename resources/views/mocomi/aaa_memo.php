@@ -164,3 +164,6 @@
             });
         }
     </script>
+
+
+( $likes->is_liked_by_auth_user() )

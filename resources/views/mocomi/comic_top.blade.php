@@ -16,8 +16,13 @@
     <script src="https://kit.fontawesome.com/1c70550d95.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- いいね実装 -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- js読み込みタグ -->
-    <script src="{{asset('/js/main.js') }}"></script>
+    <script src="{{asset('/js/like.js') }}"></script>
+    <script>
+        var likeUrl = "{{ route('like') }}";
+    </script>
 </head>
 
 <?php session_start() ?>
@@ -38,7 +43,7 @@
                     <div class="book_cover">
                         <img src="{{ asset( $books->cover_path ) }}">
                     </div>
-                    <div class="author_price_evaluation_read">
+                    <div class="author_price_evaluation_like">
                         <div class="author">
                             <!-- コミックの作者 -->
                             <p>{{ $books->author }}</p>
@@ -52,6 +57,33 @@
                                 <p><span class="star5_rating" data-rate="3.5"></span> 3.5</p>
                                 <a href="{{ route('comic_evaluation') }}" class="review_count"> 240</a>
                             </div>
+                        </div>
+                        <div class="likesWrap">
+                            <!-- いいね実装 -->
+                            <!-- 参考：$booksにはMocomiControllerから本のレコード$booksをforeachで展開 -->
+                            @auth
+                            <!-- Book.phpに作ったisLikedByメソッドをここで使用 -->
+                            @if (!$books->isLikedBy(Auth::user()))
+                            <span class="likes">
+                                <p class="likesSentence">いいね</p>
+                                <i class="fa-solid fa-thumbs-up  like-toggle" data-book-id="{{ $books->id }}"></i>
+                                <span class="like-counter">{{ $likeCount }}</span>
+                            </span><!-- /.likes -->
+                            @else
+                            <span class="likes">
+                                <p class="likesSentence">いいね</p>
+                                <i class="fa-solid fa-thumbs-up heart like-toggle liked" data-book-id="{{ $books->id }}"></i>
+                                <span class="like-counter">{{ $likeCount }}</span>
+                            </span><!-- /.likes -->
+                            @endif
+                            @endauth
+                            @guest
+                            <span class="likes">
+                                <p class="likesSentence">いいね</p>
+                                <i class="a-solid fa-thumbs-up heart"></i>
+                                <span class="like-counter">{{ $likeCount }}</span>
+                            </span><!-- /.likes -->
+                            @endguest
                         </div>
                         <!-- <div class="read">
                             <a href="{{ route('comic_browse', ['id' => $books->id]) }}" class="comicRead">
