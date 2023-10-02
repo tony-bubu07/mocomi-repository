@@ -116,7 +116,7 @@ main {
     aspect-ratio: 3.5 / 5;
 }
 
-.author_price_evaluation_read {
+.author_price_evaluation_like {
     margin: 2% 0 0 7%;
     font-size: larger;
 }
@@ -236,6 +236,33 @@ main {
     border-bottom: 1px solid #323310;
 }
 
+.likesWrap {
+    display: inline-flex;
+    text-align: center;
+    margin: 40px auto 0px auto;
+}
+
+.likes {
+    display: flex;
+    text-align: center;
+}
+
+.likesSentence {
+    margin-right: 8px;
+}
+
+.likes i {
+    cursor: pointer;
+}
+
+.liked {
+    color: #e3e548;
+}
+
+.like-counter{
+    margin-left: 10px;
+}
+
 .read {
     margin-top: 40px;
     border: 1px solid #e3e548;
@@ -261,7 +288,7 @@ main {
     justify-content: space-evenly;
 }
 
-.button_wrap{
+.button_wrap {
     color: #323310;
     display: flex;
     text-align: center;

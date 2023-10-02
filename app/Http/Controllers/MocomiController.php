@@ -11,6 +11,7 @@ use App\Models\Role;
 use App\Models\Bookshelf;
 use App\Models\member;
 use App\Models\Mocomi;
+use App\Models\Like;
 use Illuminate\Contracts\View\View;
 //Illuminate...Laravelの大事なコンポーネントが置いてある場所
 use Illuminate\Http\Request;
@@ -69,9 +70,9 @@ class MocomiController extends Controller
         // $users_data = $object->getData();
 
         $users_data = $object
-        ->join('roles', 'users.role_id', '=', 'roles.id')
-        ->select('users.*', 'roles.name as role_name') 
-        ->get();
+            ->join('roles', 'users.role_id', '=', 'roles.id')
+            ->select('users.*', 'roles.name as role_name')
+            ->get();
 
         // var_dump($users_data);
 
@@ -138,11 +139,10 @@ class MocomiController extends Controller
 
             // セッションに画像パスをセット
             $request->session()->put('session_image_path', $newImagePath);
-
-        }else if (!$request->hasFile('image')) {
+        } else if (!$request->hasFile('image')) {
 
             $nowImagePath = Auth::user()->image_path;
-            
+
             $request->session()->put('session_image_path', $nowImagePath);
         }
 
@@ -366,11 +366,39 @@ class MocomiController extends Controller
 
         if (!$books) {
             // レコードが存在しない場合の処理をここに記述する（例: エラーメッセージを表示）
+            echo ('この本は販売されていません');
         }
+
+        // この本に対するいいねのカウントを取得
+        $likeCount = $books->likes()->count();
 
         // var_dump($books);
 
-        return view('mocomi.comic_top', ['books' => $books]);
+        return view('mocomi.comic_top', ['books' => $books, 'likeCount' => $likeCount]);
+    }
+
+    // いいねボタン
+    public function like(Request $request)
+    {
+        $user_id = Auth::user()->id; //1.ログインユーザーのid取得
+        $book_id = $request->book_id; //2.投稿idの取得
+        $already_liked = Like::where('user_id', $user_id)->where('book_id', $book_id)->first(); //3.
+
+        if (!$already_liked) { //もしこのユーザーがこの投稿にまだいいねしてなかったら
+            $like = new Like; //4.Likeクラスのインスタンスを作成
+            $like->book_id = $book_id; //Likeインスタンスにbook_id,user_idをセット
+            $like->user_id = $user_id;
+            $like->save();
+        } else { //もしこのユーザーがこの投稿に既にいいねしてたらdelete
+            Like::where('book_id', $book_id)->where('user_id', $user_id)->delete();
+        }
+        //5.この投稿の最新の総いいね数を取得
+        $book_likes_count = Like::where('book_id', $book_id)->count();
+
+        $param = [
+            'book_likes_count' => $book_likes_count,
+        ];
+        return response()->json($param); //6.JSONデータをjQueryに返す
     }
 
     // コミック閲覧ページ
@@ -387,7 +415,7 @@ class MocomiController extends Controller
 
         return view('mocomi.comic_browse', ['books' => $books]);
 
-        return view('mocomi.comic_browse');
+        // return view('mocomi.comic_browse');
     }
 
     // コミック巻ごとのコメントや評価
@@ -413,9 +441,9 @@ class MocomiController extends Controller
         // $books_data = $object->getData();
 
         $books_data = $object
-        ->join('book_kinds', 'books.book_kind_id', '=', 'book_kinds.id')
-        ->select('books.*', 'book_kinds.name as book_kinds_name') 
-        ->get();
+            ->join('book_kinds', 'books.book_kind_id', '=', 'book_kinds.id')
+            ->select('books.*', 'book_kinds.name as book_kinds_name')
+            ->get();
 
         // var_dump($books_data);
 
@@ -533,7 +561,7 @@ class MocomiController extends Controller
         return view('mocomi.upload_complete')->with('books_data', $books_data);
     }
 
-    // 検索結果 開発中だけ使用
+    // 検索結果
     public function search_result(Request $request)
     {
         // viewの呼び出し

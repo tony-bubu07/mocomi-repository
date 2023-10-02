@@ -11,8 +11,8 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
-
-
+use App\Models\Like;
+use App\Models\Mocomi;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -55,6 +55,9 @@ Route::get('/women', [MocomiController::class, 'women'])->name('women');
 
 // コミック巻ごとのTOPページ
 Route::get('/comic_top/{id}', [MocomiController::class, 'comic_top'])->name('comic_top');
+// いいねボタン
+Route::post('/like/{postId}',[MocomiController::class,'like'])->name('like');
+Route::post('/unlike/{postId}',[MocomiController::class,'unlike'])->name('unlike');
 
 // 検索結果
 Route::get('/search_result', [MocomiController::class, 'search_result'])->name('search_result');
@@ -79,6 +82,7 @@ Route::get('password/email', [ForgotPasswordController::class, 'sendResetLinkEma
 
 Auth::routes();
 
+Route::post('/like', [MocomiController::class, 'like'])->name('like');
 
 
 //一般ユーザー以上
@@ -109,6 +113,9 @@ Route::group(['middleware' => ['auth', 'can:user'], ['auth', 'can:post-user'], [
 
     // 本棚ページ
     Route::get('/bookshelf', [MocomiController::class, 'bookshelf'])->name('bookshelf');
+
+    //「ajaxlike.jsファイルのurl:'ルーティング'」に書くものと合わせる。
+    Route::post('ajaxlike', [MocomiController::class, 'ajaxlike'])->name('ajaxlike');
 
     // お気に入り一覧ページ
     Route::get('/favorite', [MocomiController::class, 'favorite'])->name('favorite');
